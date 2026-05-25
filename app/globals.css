@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-clinic-green: #143628;
+  --color-clinic-green-light: #2a5a46;
+  --color-clinic-gold: #D4AF37;
+  --color-clinic-gold-light: #F9F1DC;
+  --color-clinic-bg: #FAFAFA;
+  --color-clinic-text: #1A1A1A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #FAFAFA;
+  --foreground: #1A1A1A;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f1c16;
+    --foreground: #FAFAFA;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .glass-card {
+      background: rgba(20, 54, 40, 0.6);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, var(--color-clinic-green), var(--color-clinic-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .text-gradient {
+      background: linear-gradient(90deg, var(--color-clinic-gold), var(--color-clinic-green-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
