@@ -150,11 +150,11 @@ export default function Home() {
               <p className="text-lg text-gray-200 mb-8 leading-relaxed">
                 We believe that quality healthcare should be accessible. Bankole Family Clinic accepts a wide variety of major insurance plans, including Medicare and Medicaid. We also offer affordable self-pay rates for uninsured patients.
               </p>
-              <ul className="space-y-4 mb-8">
-                {['Blue Cross Blue Shield', 'United Healthcare', 'Aetna', 'Cigna', 'Medicare & Medicaid', 'Affordable Self-Pay Options'].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <CheckCircle2 className="text-clinic-gold" size={24} />
-                    <span className="text-lg">{item}</span>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {['AARP', 'Availity', 'Aetna', 'Blue Cross Blue Shield', 'Cigna', 'Health spring', 'Humana', 'Meritain', 'Molina Healthcare Medicaid', 'Molina Healthcare Marketplace', 'Superior Health plan', 'Centene Corporation', 'United Healthcare', 'UMR', 'Well Care', 'WellMed Medical', 'WellPoint', 'Medicare & Medicaid', 'Affordable Self-Pay Options'].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <CheckCircle2 className="text-clinic-gold flex-shrink-0 mt-0.5" size={20} />
+                    <span className="text-base">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -199,7 +199,7 @@ export default function Home() {
               <StaggerItem key={i} className="bg-clinic-bg dark:bg-zinc-950 rounded-2xl border border-gray-100 dark:border-zinc-800 overflow-hidden group cursor-pointer">
                 <div className="h-48 bg-gray-200 dark:bg-zinc-800 relative overflow-hidden">
                    <div className="absolute inset-0 bg-clinic-green/20 group-hover:bg-clinic-green/10 transition-colors z-10"></div>
-                   <Image src={i === 0 ? "/images/pediatric_care.png" : i === 1 ? "/images/modern_lab.png" : "/images/doctor_portrait.png"} alt={article.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <Image src={i === 0 ? "/images/pediatric_care.png" : i === 1 ? "/images/blood_pressure_check.png" : "/images/doctor_portrait.png"} alt={article.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-6">
                   <p className="text-sm text-clinic-gold font-bold mb-2">{article.date}</p>

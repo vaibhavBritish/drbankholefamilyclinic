@@ -3,14 +3,16 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/Animations';
 
 export default function Gallery() {
   const images = [
-    { src: "/images/gallery-1.png", alt: "Clinic Exterior" },
-    { src: "/images/pediatric_care.png", alt: "Pediatric Care" },
-    { src: "/images/gallery-2.png", alt: "Modern Consultation Room" },
-    { src: "/images/modern_lab.png", alt: "State of the Art Medical Lab" },
-    { src: "/images/gallery-3.png", alt: "State of the Art Medical Equipment" },
-    { src: "/images/doctor_portrait.png", alt: "Our Expert Doctors" },
-    { src: "/images/about.png", alt: "Doctor Patient Consultation" },
-    { src: "/images/hero.png", alt: "Welcoming Reception Area" }
+    { src: "/bankole/bankole-1.jpeg", alt: "Bankole Family Clinic Gallery 1" },
+    { src: "/bankole/bankole-2.jpeg", alt: "Bankole Family Clinic Gallery 2" },
+    { src: "/bankole/bankole-3.jpeg", alt: "Bankole Family Clinic Gallery 3" },
+    { src: "/bankole/bankole-4.jpeg", alt: "Bankole Family Clinic Gallery 4" },
+    { src: "/bankole/bankole-5.jpeg", alt: "Bankole Family Clinic Gallery 5" },
+    { src: "/bankole/bankole-6.jpeg", alt: "Bankole Family Clinic Gallery 6" },
+    { src: "/bankole/bankole-7.jpeg", alt: "Bankole Family Clinic Gallery 7" },
+    { src: "/bankole/bankole-8.jpeg", alt: "Bankole Family Clinic Gallery 8" },
+    { src: "/bankole/bankole-9.jpeg", alt: "Bankole Family Clinic Gallery 9" },
+    { src: "/bankole/bankole-10.jpeg", alt: "Bankole Family Clinic Gallery 10" }
   ];
 
   return (
@@ -37,9 +39,6 @@ export default function Gallery() {
                   height={400}
                   className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <p className="text-white text-lg font-bold px-4 text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{img.alt}</p>
-                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
